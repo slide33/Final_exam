@@ -1,0 +1,132 @@
+.section2__title {
+    @include title;
+
+}
+
+.sliders {
+
+    display        : -webkit-flex;
+    display        : -ms-flex;
+    display        : flex;
+    justify-content: space-between;
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items   : center;
+        margin-top    : 18px;
+    };
+}
+
+.slider {
+    width: 32%;
+    @include breakpoint(sm) {
+        width    : 100%;
+        max-width: 320px;
+    };
+}
+
+.slider-2 {
+    @include breakpoint(sm) {
+        margin: 10px 0;
+    };
+}
+
+.slider__item {
+    position: relative;
+}
+
+.item__bg {
+    width: 100%;
+    @include breakpoint(sm) {
+        height: 240px;
+        width : 100%;
+        // max-width: 400px;
+
+    }
+    @include breakpoint(md) {
+        height: 400px;
+    }
+
+}
+
+.arrow-left {
+    position: absolute;
+    top     : 38%;
+    left    : 7%;
+    z-index : 2;
+    @include breakpoint(sm) {
+        display: none;
+    };
+    @include breakpoint(md) {
+        top: 10%;
+    }
+
+}
+@include breakpoint(sm) {
+    .prev {
+        content : '';
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        z-index : 3;
+        height  : 100%;
+        width   : 50%;
+    }
+
+    .next {
+        content : '';
+        position: absolute;
+        top     : 0;
+        right   : 0;
+        z-index : 3;
+        height  : 100%;
+        width   : 50%;
+    }
+};
+
+.arrow-right {
+    position: absolute;
+    top     : 38%;
+    right   : 7%;
+    z-index : 2;
+    @include breakpoint(sm) {
+        display: none;
+    };
+    @include breakpoint(md) {
+        top: 10%;
+    }
+}
+
+.item__text {
+    position: absolute;
+    bottom  : 0;
+    padding : 20px;
+}
+
+.text__redTitle {
+    display         : inline-block;
+    background-color: $red;
+    color           : $white;
+    font-family     : MontserratRegular;
+    font-size       : 10px;
+    padding         : 5px 12px;
+    text-transform  : uppercase;
+    letter-spacing  : 2px;
+    border-radius   : 10px;
+    margin-bottom   : 6%;
+    margin-left     : 1%;
+}
+
+.text__bigTitle {
+    font-family  : MontserratBold;
+    font-size    : 24px;
+    color        : $white;
+    margin-bottom: 5%;
+    line-height  : 1.2;
+}
+
+.text__describe {
+    font-family: RobotoLight;
+    font-size  : 14px;
+    color      : $white;
+    line-height: 1.1;
+}

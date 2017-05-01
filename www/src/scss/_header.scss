@@ -1,0 +1,177 @@
+
+.header {
+    height: 100vh;
+    max-height: 700px;
+    @include breakpoint(sm) {
+        min-height: 540px;
+    };
+    @include breakpoint(md) {
+        min-height: 700px;
+    };
+}
+
+.header-top {
+    display        : -webkit-flex;
+    display        : -ms-flex;
+    display        : flex;
+    justify-content: space-between;
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items   : center;
+    };
+    @include breakpoint(md) {
+        padding-top: 10px;
+    };
+
+}
+
+.header-top__logo {
+    font-family    : MontserratBold;
+    font-size      : 20px;
+
+    display        : block;
+
+    margin-top     : 48px;
+
+    text-decoration: none;
+
+    color          : $white;
+    @include breakpoint(sm) {
+        order     : 1;
+        margin-top: 120px;
+    };
+    @include breakpoint(md) {
+        margin-left: 39px;
+    };
+
+}
+
+.header-top__auth {
+    display   : -webkit-flex;
+    display   : -ms-flex;
+    display   : flex;
+
+    margin-top: 35px;
+    @include breakpoint(sm) {
+        margin-top: 20px;
+    };
+    @include breakpoint(md) {
+        margin-right: 20px;
+    };
+
+}
+
+.auth__login {
+    font-family    : MontserratBold;
+    font-size      : 14px;
+
+    margin-right   : 19px;
+    padding        : 10px 17px;
+
+    text-decoration: none;
+
+    color          : $white;
+    border-radius  : 24px;
+    border         : 2px solid transparent;
+
+    &:hover {
+        border: 2px solid $white;
+
+    }
+}
+
+.auth__reg {
+    font-family    : MontserratBold;
+    font-size      : 14px;
+
+    padding        : 10px 17px;
+
+    text-decoration: none;
+
+    color          : $white;
+    border-radius  : 24px;
+    border         : 2px solid transparent;
+
+    &:hover {
+        border: 2px solid $white;
+
+    }
+}
+
+.header-title {
+    display        : -webkit-flex;
+    display        : -ms-flex;
+    display        : flex;
+    flex-direction : column;
+
+    margin-top     : 15%;
+
+    justify-content: space-around;
+    @include breakpoint(sm) {
+        margin-top : 26px;
+        align-items: center;
+    };
+    @include breakpoint(md) {
+        margin-top: 140px;
+    };
+
+}
+
+.header-title__big-title {
+    font-family   : MontserratBold;
+    font-size     : 52px;
+    line-height   : 1.2;
+
+    text-align    : center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color         : $white;
+    @include breakpoint(sm) {
+        font-size: 30px;
+    };
+}
+
+.header-title__title-small {
+    font-family: RobotoLight;
+    font-size  : 24px;
+
+    margin-top : 28px  ;
+
+    text-align : center;
+
+    color      : $white;
+    @include breakpoint(sm) {
+        font-size: 18px;
+        width    : 79%;
+    };
+    @include breakpoint(md) {
+        margin-top: 25px;
+    };
+
+}
+
+.header-title__button {
+    font-family     : MontserratBold;
+    font-size       : 14px;
+
+    margin-top      : 38px;
+    padding         : 12px 23px;
+
+    text-decoration : none;
+
+    color           : $white;
+    border          : none;
+    border-radius   : 25px;
+    background-color: $red;
+
+    align-self      : center;
+    @include breakpoint(sm) {
+        margin-top: 8%;
+
+    };
+    @include breakpoint(md) {
+        margin-top: 37px;
+    };
+
+}

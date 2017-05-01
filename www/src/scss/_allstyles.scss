@@ -1,0 +1,44 @@
+$white: #fff;
+$red: #ff4e50;
+$grey: #8f8f8f;
+$black: #333;
+
+body {}
+
+.wrapper {
+
+    position : relative;
+
+    max-width: 940px;
+    height   : 100%;
+    margin   : 0 auto;
+    @include breakpoint(sm) {
+        max-width: 500px;
+        padding  : 0 10px;
+    };
+    @include breakpoint(md) {
+        max-width: 748px;
+        padding  : 0 10px;
+    };
+
+}
+@mixin title {
+    display      : block;
+
+    margin-bottom: 4%;
+    padding-top  : 10%;
+
+    text-align   : center;
+
+    color        : $black;
+
+    font-family  : MontserratBold;
+    font-size    : 22px;
+    @include breakpoint(sm) {
+        padding-top: 12%;
+    };
+    @include breakpoint(md) {
+        padding-top  : 13%;
+        margin-bottom: 5%;
+    };
+}

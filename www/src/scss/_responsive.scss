@@ -1,0 +1,24 @@
+$breakpoint-sm: 767px;
+$breakpoint-md: 960px;
+@mixin breakpoint($breakpoint) {
+     @if $breakpoint == sm{
+        @media screen and (max-width: $breakpoint-sm) {
+             @content;
+        }
+    }
+    @else if $breakpoint == md {
+         @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md){
+            @content;
+        }
+    }
+    @else if $breakpoint == lg {
+         @media screen and (min-width: $breakpoint-md){
+            @content;
+        }
+    }
+    @else {
+         @media screen and (min-width: $breakpoint){
+            @content;
+        }
+    }
+}

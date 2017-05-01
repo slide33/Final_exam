@@ -1,0 +1,112 @@
+.partners__title {
+    @include title;
+    @include breakpoint(sm) {
+        padding-top: 12%;
+    };
+}
+
+.peoples {
+    display        : -webkit-flex;
+    display        : -ms-flex;
+    display        : flex;
+
+    justify-content: space-between;
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items   : center;
+        margin-top    : 22px;
+    };
+    @include breakpoint(md) {
+        width    : 520px;
+        margin   : 0 auto;
+        flex-wrap: wrap;
+    }
+}
+
+.people {
+    width       : 23%;
+    padding-left: 4px;
+    text-align  : center;
+    @include breakpoint(sm) {
+        width        : 100%;
+        margin-bottom: 9px;
+    };
+    @include breakpoint(md) {
+        width: 49%;
+    }
+}
+@include breakpoint(sm) {
+    .people:nth-child(4) {
+        margin-bottom: 0;
+    }
+};
+@include breakpoint(md) {
+    .people:nth-child(3) {
+        margin-top: 50px;
+    }
+
+    .people:nth-child(4) {
+        margin-top: 50px;
+    }
+}
+
+.people__photo {
+    display: inline-block;
+
+    width  : 123px;
+}
+
+.people__name {
+    margin-top : 2%;
+    padding    : 4% 0;
+
+    color      : $black;
+
+    font-family: MontserratBold;
+    font-size  : 14px;
+    @include breakpoint(sm) {
+        margin-top: 13px;
+        padding   : 0;
+    };
+
+}
+
+.people__describe {
+    color      : $grey;
+    margin-top : 5%;
+    line-height: 16px;
+    font-family: RobotoLight;
+    font-size  : 14px;
+    @include breakpoint(sm) {
+        margin-top: 4px;
+        display   : inline-block;
+        width     : 75%;
+    };
+
+}
+
+.partners__button {
+    display        : block;
+    text-align     : center;
+    width          : 133px;
+    margin         : 4% auto 0;
+    padding        : 12px 28px;
+
+    text-decoration: none;
+
+    color          : $red;
+    border         : 2px solid $red;
+    border-radius  : 25px;
+
+    font-family    : MontserratBold;
+    font-size      : 14px;
+    @include breakpoint(sm) {
+        width : auto;
+        margin: 3% 3% 0;
+
+    };
+    @include breakpoint(md) {
+        margin-top: 6%;
+    }
+
+}

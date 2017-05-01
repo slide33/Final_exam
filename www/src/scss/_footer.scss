@@ -1,0 +1,120 @@
+footer {
+    border-top: 5px solid $red;
+    padding   : 3% 0;
+    @include breakpoint(sm) {
+        padding-top: 5%;
+    };
+
+}
+
+.footer-wrap {
+    display        : -webkit-flex;
+    display        : -ms-flex;
+    display        : flex;
+    justify-content: space-between;
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items   : center;
+    };
+}
+
+.footer-wrap__left {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items   : center;
+    };
+    @include breakpoint(md) {
+        padding-top: 30px;
+    }
+}
+
+.footer__logo {
+    font-family    : MontserratBold;
+    font-size      : 16px;
+
+    display        : block;
+
+    text-decoration: none;
+
+    color          : $red;
+    @include breakpoint(md) {
+        margin-left: 30px;
+    }
+}
+
+.footer__company {
+    margin-left: 90px;
+    @include breakpoint(sm) {
+        margin-left: 0;
+        text-align : center;
+        margin-top : 14px;
+    };
+}
+
+.company__name {
+    font-family  : MontserratBold;
+    color        : $black;
+    font-size    : 14px;
+    margin-bottom: 10px;
+    @include breakpoint(sm) {
+        margin-bottom: 3px;
+    };
+
+}
+
+.menu__item {
+    @include breakpoint(sm) {
+        display: inline-block;
+        margin : 0 3px;
+    };
+}
+
+.item__link {
+    text-decoration: none;
+    font-family    : RobotoLight;
+    font-size      : 14px;
+    display        : block;
+    padding        : 5px 0;
+    color          : $grey;
+
+}
+
+.item__link:hover {
+    text-decoration: underline;
+}
+
+.footer__partners {
+    margin-left: 90px;
+    @include breakpoint(sm) {
+        margin: 11px 0 10px;
+
+    };
+}
+
+.partners__name {
+    font-family  : MontserratBold;
+    color        : $black;
+    font-size    : 14px;
+    margin-bottom: 10px;
+}
+
+.footer__designBy {
+    @include breakpoint(md) {
+        padding-right: 24px;
+        padding-top  : 15px;
+    }
+}
+
+.designBy__title {
+    font-family  : MontserratBold;
+    font-size    : 10px;
+    color        : $grey;
+    margin-bottom: 10px;
+    text-align   : right;
+    @include breakpoint(sm) {
+        text-align: center;
+    };
+}
